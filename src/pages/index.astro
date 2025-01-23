@@ -1,11 +1,42 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import PrimaryCard from "@components/cards/PrimaryCard.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Home">
+    <section>
+        <h1 class="hero-title">Hero Title</h1>
+        <p>
+            Lorem ipsum odor amet, consectetuer adipiscing elit. Potenti velit
+            nascetur vehicula mi eros bibendum magnis vivamus ullamcorper.
+            Vulputate mauris turpis facilisi; auctor mollis magnis luctus
+            tincidunt magnis. Aliquet habitant non augue; placerat senectus
+            dictumst luctus. Venenatis cursus fames phasellus consequat torquent
+            justo velit. Venenatis lectus proin aliquam viverra dictumst
+            nascetur. Himenaeos quisque vitae nunc felis hendrerit maecenas.
+            Montes ipsum arcu arcu maecenas turpis aptent tristique mi curae.
+            Tristique amet euismod volutpat nam pharetra risus rhoncus posuere.
+        </p>
+        <p>
+            Nunc pharetra viverra, finibus duis ultrices eget. Asemper eget
+            felis quisque nisl leo habitant mus. Himenaeos turpis conubia
+            rhoncus accumsan pellentesque hac imperdiet in inceptos. Blandit
+            ullamcorper lacus ullamcorper, ultrices egestas et ultricies.
+            Senectus arcu odio nascetur mattis non penatibus lobortis class.
+            Lorem elit pellentesque magnis parturient sit augue blandit.
+            Placerat lobortis montes pharetra ut a. Ligula adipiscing elementum
+            congue vestibulum; congue in sapien class hac. Euismod elementum
+            himenaeos suscipit viverra donec torquent malesuada malesuada.
+            Pharetra inceptos tincidunt commodo aliquet; nostra nunc hendrerit
+            vulputate.
+        </p>
+    </section>
+
+    <section>
+        <PrimaryCard>
+            <img src="https://picsum.photos/350/250" alt="alternate text" />
+            <h3>card</h3>
+            <p>paragraph</p>
+        </PrimaryCard>
+    </section>
 </Layout>

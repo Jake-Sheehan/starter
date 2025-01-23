@@ -1,0 +1,50 @@
+@import url('../theme/tokens.css');
+
+html {
+    font-family: var(--ff-base);
+}
+
+body {
+    background-color: var(--color-surface-primary);
+    font-size: var(--fs-body-regular);
+    color: var(--color-text-primary);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--ff-heading);
+    color: var(--color-text-heading);
+    text-transform: capitalize;
+}
+
+.hero-title {
+    font-size: var(--fs-title-large);
+}
+
+h1 {
+    font-size: var(--fs-title);
+}
+
+
+h2 {
+    font-size: var(--fs-section-heading);
+}
+
+h3 {
+    font-size: var(--fs-heading);
+}
+
+h4 {
+    font-size: var(--fs-body-large);
+}
+
+a {
+    color: var(--color-text-link);
+}
+
+a:hover,
+a:focus-visible {
+    color: var(--color-text-highlight);
+}

@@ -1,0 +1,51 @@
+---
+import Sun from "phosphor-astro/Sun.astro";
+import Moon from "phosphor-astro/Moon.astro";
+---
+
+<script>
+    const button = document.getElementById("switch");
+    const sun = document.getElementById("sun");
+    const moon = document.getElementById("moon");
+    const app = document.getElementById("app");
+
+    if (button && sun && moon && app) {
+        if (app.classList.contains("light")) {
+            sun.classList.toggle("hidden");
+        } else {
+            moon.classList.toggle("hidden");
+        }
+
+        button.addEventListener("click", () => {
+            sun.classList.toggle("hidden");
+            moon.classList.toggle("hidden");
+            app.classList.toggle("light");
+            app.classList.toggle("dark");
+        });
+    } else {
+        console.log("theme switcher error: elements not found");
+    }
+</script>
+
+<button id="switch">
+    <Sun id="sun" class="sun icon hidden" />
+    <Moon id="moon" class="moon icon hidden" />
+</button>
+
+<style>
+    button {
+        cursor: pointer;
+        border: none;
+        padding: 0;
+        background: transparent;
+    }
+
+    .icon {
+        width: 36px;
+        color: var(--color-text-primary);
+    }
+
+    .hidden {
+        display: none;
+    }
+</style>

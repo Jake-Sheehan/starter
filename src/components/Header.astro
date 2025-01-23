@@ -1,0 +1,22 @@
+---
+import ThemeSwitcher from "@components/ThemeSwitcher.astro";
+import logoUrl from "@assets/logoipsum.svg?url";
+---
+
+<header class="primary-header">
+    <img src={logoUrl} alt="logo" />
+    <nav class="primary-nav">
+        <ul>
+            <li>
+                <a href="/">home</a>
+            </li>
+            <li>
+                <a href="/about">about</a>
+            </li>
+            <li>
+                <a href="/contact">contact</a>
+            </li>
+        </ul>
+    </nav>
+    <ThemeSwitcher />
+</header>
