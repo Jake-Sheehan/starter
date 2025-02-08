@@ -31,6 +31,11 @@
     --rounded-md: var(--radius-md);
     --rounded-lg: var(--radius-lg);
     --rounded-full: var(--radius-full);
+
+    /*
+     * PADDING
+     * */
+    --padding-card: var(--padding-sm);
 }
 
 /* Light Theme */
@@ -44,13 +49,13 @@ html.light {
     --color-text-primary: var(--color-neutral-900);
     --color-text-secondary: var(--color-secondary);
     --color-text-brand: var(--color-primary);
-    --color-text-muted: var(--color-neutral-400);
+    --color-text-muted: var(--color-neutral-300);
     --color-text-highlight: var(--color-tertiary);
     --color-text-link: var(--color-neutral-900);
-    --color-text-inverted: var(--color-off-white);
+    --color-text-inverted: var(--color-neutral-50);
 
     /* surface */
-    --color-surface-primary: var(--color-off-white);
+    --color-surface-primary: var(--color-neutral-50);
     --color-surface-secondary: var(--color-secondary);
     --color-surface-brand: var(--color-primary);
     --color-surface-inverted: var(--color-neutral-900);
@@ -59,6 +64,11 @@ html.light {
 
     /* border */
     --color-border: var(--color-neutral-300);
+
+    /*
+     * SHADOW
+     * */
+    --shadow-card: var(--shadow-2xl);
 }
 
 /* Dark Theme */
@@ -87,4 +97,9 @@ html.dark {
 
     /* border */
     --color-border: var(--color-neutral-700);
+
+    /*
+     * SHADOW
+     * */
+    --shadow-card: var(--shadow-dark-2xl);
 }

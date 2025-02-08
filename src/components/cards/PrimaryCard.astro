@@ -1,5 +1,17 @@
+---
+interface Props {
+    imgSrc?: string;
+    imgAlt?: string;
+}
+
+const { imgSrc, imgAlt = 'alt text for card image is missing' } = Astro.props;
+---
+
 <div class="card">
-    <slot />
+    {imgSrc && <img src={imgSrc} alt={imgAlt} />}
+    <div class="content">
+        <slot />
+    </div>
 </div>
 
 <style>
@@ -7,6 +19,19 @@
         /* give card min height and width so it is visible with no content */
         min-block-size: 10px;
         min-inline-size: 10px;
+        display: inline-block;
+        /* styles */
         background-color: var(--color-surface-card);
+        box-shadow: var(--shadow-card);
+        border-radius: var(--rounded-lg);
+    }
+
+    img {
+        border-top-left-radius: var(--rounded-lg);
+        border-top-right-radius: var(--rounded-lg);
+    }
+
+    .content {
+        padding: var(--padding-card);
     }
 </style>

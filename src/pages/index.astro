@@ -4,7 +4,7 @@ import PrimaryCard from '@components/cards/PrimaryCard.astro';
 ---
 
 <Layout title="Home">
-    <section>
+    <section id="hero-section" class="section wrapper">
         <h1 class="hero-title">Hero Title</h1>
         <p>
             Lorem ipsum odor amet, consectetuer adipiscing elit. Potenti velit
@@ -32,11 +32,40 @@ import PrimaryCard from '@components/cards/PrimaryCard.astro';
         </p>
     </section>
 
-    <section>
-        <PrimaryCard>
-            <img src="https://picsum.photos/350/250" alt="alternate text" />
+    <section class="section wrapper cards">
+        <PrimaryCard imgSrc="https://picsum.photos/350/250">
+            <h3>card</h3>
+            <p>paragraph</p>
+        </PrimaryCard>
+
+        <PrimaryCard imgSrc="https://picsum.photos/350/250">
+            <h3>card</h3>
+            <p>paragraph</p>
+        </PrimaryCard>
+
+        <PrimaryCard imgSrc="https://picsum.photos/350/250">
             <h3>card</h3>
             <p>paragraph</p>
         </PrimaryCard>
     </section>
 </Layout>
+
+<style>
+    .hero-title {
+        background: -webkit-linear-gradient(
+            0deg,
+            rgba(87, 87, 217, 1) 0%,
+            rgba(255, 0, 123, 1) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .cards {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+</style>

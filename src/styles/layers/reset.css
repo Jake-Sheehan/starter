@@ -28,8 +28,17 @@ dd {
     margin: 0;
 }
 
+/* Add flow back in */
+h1:where(:not(:first-child)),
+h2:where(:not(:first-child)),
+h3:where(:not(:first-child)),
+h4:where(:not(:first-child)),
+p:where(:not(:first-child)) {
+    margin-top: 1em;
+}
+
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-[role="list"] {
+[role='list'] {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -38,6 +47,7 @@ dd {
 /* Set core body defaults */
 body {
     min-block-size: 100vh;
+    min-block-size: 100dvh;
     line-height: 1.6;
 }
 
@@ -73,6 +83,12 @@ li {
 a:not([class]) {
     text-decoration-skip-ink: auto;
     color: currentColor;
+}
+
+/* Buttons and links get a pointer cursor */
+a,
+button {
+    cursor: pointer;
 }
 
 /* Make images easier to work with */

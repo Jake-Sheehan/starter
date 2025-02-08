@@ -11,7 +11,9 @@
     "dependencies": {
         "@fontsource-variable/inter": "^5.1.1",
         "@fontsource/roboto": "^5.1.1",
+        "@nanostores/persistent": "^0.10.2",
         "astro": "^5.1.8",
+        "nanostores": "^0.11.3",
         "phosphor-astro": "^2.1.0",
         "postcss-preset-env": "^10.1.3"
     },

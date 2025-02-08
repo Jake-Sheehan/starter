@@ -3,10 +3,11 @@ import ThemeSwitcher from '@components/ThemeSwitcher.astro';
 import logoUrl from '@assets/logoipsum.svg?url';
 ---
 
-<header class="primary-header">
+<header class="primary-header wrapper">
     <img src={logoUrl} alt="logo" />
-    <nav class="primary-nav">
-        <ul>
+
+    <nav class="nav">
+        <ul role="list">
             <li>
                 <a href="/">home</a>
             </li>
@@ -18,5 +19,44 @@ import logoUrl from '@assets/logoipsum.svg?url';
             </li>
         </ul>
     </nav>
-    <ThemeSwitcher />
+    <div class="theme-switcher">
+        <ThemeSwitcher />
+    </div>
 </header>
+
+<style>
+    .primary-header {
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        grid-template-areas: 'logo nav theme';
+        gap: 1rem;
+        padding: 1rem 0;
+        width: 100%;
+    }
+
+    img {
+        grid-area: logo;
+    }
+
+    .nav {
+        grid-area: nav;
+        display: grid;
+        place-items: center;
+    }
+
+    .theme-switcher {
+        grid-area: theme;
+    }
+
+    ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    a {
+        text-decoration: none;
+    }
+</style>

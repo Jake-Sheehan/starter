@@ -46,6 +46,42 @@
     --radius-full: 9999px;
 
     /*
+     * PADDING
+     * */
+    --padding-xs: 8px;
+    --padding-sm: 16px;
+    --padding-md: 24px;
+    --padding-lg: 32px;
+    --padding-xl: 48px;
+    --padding-2xl: 64px;
+
+    /*
+     * Shadows
+     * */
+    --shadow-2xs: 0 1px rgb(0 0 0 / 0.05);
+    --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+        0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+        0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+        0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+
+    --shadow-dark-2xs: 0 1px rgb(102 45 145 / 0.05);
+    --shadow-dark-xs: 0 1px 2px 0 rgb(102 45 145 / 0.05);
+    --shadow-dark-sm: 0 1px 3px 0 rgb(102 45 145 / 0.25),
+        0 1px 2px -1px rgb(102 45 145 / 0.25);
+    --shadow-dark-md: 0 4px 6px -1px rgb(102 45 145 / 0.25),
+        0 2px 4px -2px rgb(102 45 145 / 0.25);
+    --shadow-dark-lg: 0 10px 15px -3px rgb(102 45 145 / 0.25),
+        0 4px 6px -4px rgb(102 45 145 / 0.25);
+    --shadow-dark-xl: 0 20px 25px -5px rgb(102 45 145 / 0.25),
+        0 8px 10px -6px rgb(102 45 145 / 0.25);
+    --shadow-dark-2xl: 0 25px 50px -12px rgb(102 45 145 / 0.75);
+
+    /*
      * COLOR
      * */
 
