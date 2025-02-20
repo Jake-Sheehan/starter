@@ -6,7 +6,11 @@ import logoUrl from '@assets/logoipsum.svg?url';
 <header class="primary-header wrapper">
     <img src={logoUrl} alt="logo" />
 
-    <nav class="nav">
+    <button class="hamburger-menu" aria-controls="nav" aria-expanded="false">
+        <span class="visually-hidden">menu</span>
+        menu
+    </button>
+    <nav id="nav" class="nav">
         <ul role="list">
             <li>
                 <a href="/">home</a>
@@ -36,6 +40,11 @@ import logoUrl from '@assets/logoipsum.svg?url';
 
     img {
         grid-area: logo;
+    }
+
+    .hamburger-menu {
+        grid-area: nav;
+        display: none;
     }
 
     .nav {
