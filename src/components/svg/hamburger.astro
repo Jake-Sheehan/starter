@@ -6,7 +6,7 @@ const stroke_width_px = `${stroke_width}px`;
 const duration = '300ms';
 ---
 
-<svg :class="open ? 'open' : ''" viewBox=`0 0 ${view_box} ${view_box}`>
+<svg class="open" viewBox=`0 0 ${view_box} ${view_box}`>
     <line
         class="top"
         x1="0"
@@ -35,9 +35,10 @@ const duration = '300ms';
 
 <style define:vars={{ view_box_px, stroke_width_px, duration }}>
     svg {
-        color: var(--color-headline);
+        color: var(--color-text-primary);
         cursor: pointer;
         transition: all var(--duration);
+        pointer-events: none;
     }
 
     svg * {
@@ -54,18 +55,18 @@ const duration = '300ms';
             calc(var(--view_box_px) - (var(--stroke_width_px) / 2));
     }
 
-    svg.open .top {
+    :global(button[aria-controls='nav'][aria-expanded='true']) line.top {
         transform: translateY(
                 calc((var(--view_box_px) / 2) - (var(--stroke_width_px) / 2))
             )
             rotate(45deg);
     }
 
-    svg.open .middle {
+    :global(button[aria-controls='nav'][aria-expanded='true']) line.middle {
         opacity: 0;
     }
 
-    svg.open .bottom {
+    :global(button[aria-controls='nav'][aria-expanded='true']) line.bottom {
         transform: translateY(
                 calc((var(--view_box_px) / 2 - var(--stroke_width_px) / 2) * -1)
             )

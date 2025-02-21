@@ -9,6 +9,7 @@ import logoUrl from '@assets/logoipsum.svg?url';
         const menuButton = document.querySelector('[aria-controls="nav"]');
         if (!menuButton) return false;
 
+        // add click listrener to open and close menu
         menuButton.addEventListener('click', (event) => {
             menuButton.setAttribute(
                 'aria-expanded',
@@ -16,6 +17,13 @@ import logoUrl from '@assets/logoipsum.svg?url';
                     ? 'false'
                     : 'true'
             );
+        });
+
+        // close menu on click outside
+        document.addEventListener('click', (event) => {
+            if (event.target !== menuButton) {
+                menuButton.setAttribute('aria-expanded', 'false');
+            }
         });
 
         return true;
@@ -53,6 +61,8 @@ import logoUrl from '@assets/logoipsum.svg?url';
     header {
         display: grid;
         grid-template-columns: 1fr auto auto;
+        grid-template-rows: auto;
+        align-items: center;
         grid-template-areas: 'logo nav theme';
         gap: 1rem;
         padding: 1rem 2rem;
@@ -65,13 +75,14 @@ import logoUrl from '@assets/logoipsum.svg?url';
     }
 
     button[aria-controls='nav'] {
-        --icon-size: 32px;
+        --icon-size: 24px;
         height: var(--icon-size);
         width: var(--icon-size);
         grid-area: nav;
         border: 0;
         background-color: transparent;
         cursor: pointer;
+        padding: 0;
 
         display: none;
         @media (width < 760px) {

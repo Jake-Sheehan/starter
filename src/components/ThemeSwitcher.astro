@@ -35,13 +35,19 @@ import Moon from 'phosphor-astro/Moon.astro';
 
 <style>
     button {
+        --size: 24px;
+        width: var(--size);
+        height: var(--size);
         border: none;
         padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background: transparent;
     }
 
     .icon {
-        width: 36px;
+        width: 100%;
         color: var(--color-text-primary);
     }
 
