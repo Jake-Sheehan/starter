@@ -69,6 +69,7 @@ html.light {
      * SHADOW
      * */
     --shadow-card: var(--shadow-2xl);
+    --shadow-nav: var(--shadow-xl);
 }
 
 /* Dark Theme */
