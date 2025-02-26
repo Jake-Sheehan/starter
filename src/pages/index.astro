@@ -33,19 +33,28 @@ import PrimaryCard from '@components/cards/PrimaryCard.astro';
     </section>
 
     <section class="section wrapper cards">
-        <PrimaryCard imgSrc="https://picsum.photos/350/250">
-            <h3>card</h3>
-            <p>paragraph</p>
+        <PrimaryCard>
+            <img src="https://picsum.photos/350/250" alt="test" />
+            <div class="card-content">
+                <h3>card</h3>
+                <p>paragraph</p>
+            </div>
         </PrimaryCard>
 
-        <PrimaryCard imgSrc="https://picsum.photos/350/250">
-            <h3>card</h3>
-            <p>paragraph</p>
+        <PrimaryCard>
+            <img src="https://picsum.photos/350/250" alt="test" />
+            <div class="card-content">
+                <h3>card</h3>
+                <p>paragraph</p>
+            </div>
         </PrimaryCard>
 
-        <PrimaryCard imgSrc="https://picsum.photos/350/250">
-            <h3>card</h3>
-            <p>paragraph</p>
+        <PrimaryCard>
+            <img src="https://picsum.photos/350/250" alt="test" />
+            <div class="card-content">
+                <h3>card</h3>
+                <p>paragraph</p>
+            </div>
         </PrimaryCard>
     </section>
 </Layout>
@@ -67,5 +76,14 @@ import PrimaryCard from '@components/cards/PrimaryCard.astro';
         justify-content: center;
         align-items: flex-start;
         gap: 2rem;
+
+        img {
+            border-top-left-radius: var(--rounded-lg);
+            border-top-right-radius: var(--rounded-lg);
+        }
+    }
+
+    .card-content {
+        padding: 1.5rem;
     }
 </style>

@@ -5,9 +5,11 @@ import logoUrl from '@assets/logoipsum.svg?url';
 ---
 
 <script>
-    const wireButton = (): boolean => {
+    const wireButton = () => {
         const menuButton = document.querySelector('[aria-controls="nav"]');
-        if (!menuButton) return false;
+        if (!menuButton) {
+            throw new ReferenceError('Menu button not found');
+        }
 
         // add click listrener to open and close menu
         menuButton.addEventListener('click', (event) => {
@@ -25,11 +27,15 @@ import logoUrl from '@assets/logoipsum.svg?url';
                 menuButton.setAttribute('aria-expanded', 'false');
             }
         });
-
-        return true;
     };
 
-    wireButton();
+    try {
+        wireButton();
+    } catch (error) {
+        if (error instanceof ReferenceError) {
+            console.error(error.message);
+        }
+    }
 </script>
 
 <header class="primary-header">
