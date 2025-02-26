@@ -1,5 +1,3 @@
-@import url('../theme/tokens.css');
-
 html {
     font-family: var(--ff-base);
 }
