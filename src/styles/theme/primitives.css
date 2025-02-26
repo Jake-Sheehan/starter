@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../../../public/fonts/Helvetica.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
 :root {
     /*
      * FONT
@@ -6,6 +13,7 @@
     /* font family */
     --font-roboto: 'Roboto', sans-serif;
     --font-inter: 'Inter Variable', sans-serif;
+    --font-helvetica: 'Helvetica', sans-serif;
 
     /* font size */
     --fs-300: 0.875rem;

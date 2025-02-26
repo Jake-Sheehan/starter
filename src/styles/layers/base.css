@@ -15,10 +15,7 @@ h4 {
     font-family: var(--ff-heading);
     color: var(--color-text-heading);
     text-transform: capitalize;
-}
-
-.hero-title {
-    font-size: var(--fs-title-large);
+    letter-spacing: -0.05em;
 }
 
 h1 {

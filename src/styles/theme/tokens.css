@@ -4,8 +4,8 @@
      * */
 
     /* font family */
-    --ff-base: var(--font-inter);
-    --ff-heading: var(--font-roboto);
+    --ff-base: var(--font-roboto);
+    --ff-heading: var(--font-helvetica);
 
     /* font size */
     --fs-title-large: var(--fs-1000);
@@ -32,6 +32,8 @@
     /* color */
     --color-surface-success: var(--color-green-500);
     --color-surface-failure: var(--color-red-500);
+    --color-text-light: var(--color-neutral-50);
+    --color-text-dark: var(--color-neutral-900);
 }
 
 /* Light Theme */

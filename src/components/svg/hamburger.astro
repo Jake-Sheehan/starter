@@ -55,18 +55,18 @@ const duration = '300ms';
             calc(var(--view_box_px) - (var(--stroke_width_px) / 2));
     }
 
-    :global(button[aria-controls='nav'][aria-expanded='true']) line.top {
+    :global(button[aria-expanded='true']) line.top {
         transform: translateY(
                 calc((var(--view_box_px) / 2) - (var(--stroke_width_px) / 2))
             )
             rotate(45deg);
     }
 
-    :global(button[aria-controls='nav'][aria-expanded='true']) line.middle {
+    :global(button[aria-expanded='true']) line.middle {
         opacity: 0;
     }
 
-    :global(button[aria-controls='nav'][aria-expanded='true']) line.bottom {
+    :global(button[aria-expanded='true']) line.bottom {
         transform: translateY(
                 calc((var(--view_box_px) / 2 - var(--stroke_width_px) / 2) * -1)
             )
